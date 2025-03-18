@@ -6,13 +6,13 @@ const supabase = createClient<Database>("http://localhost:3000", "test");
 
 test("computed relationships", async () => {
   const { data, error } = await supabase
-    .from("placement")
-    .select(`id, hotel(id,name)`);
+    .from("booking")
+    .select(`id, hotel!inner(id,name)`);
   if (error) {
     // ignore
   }
   expectTypeOf(data).toEqualTypeOf<Array<{
     id: number;
-    hotel: Array<Pick<Tables<"hotel">, "id" | "name">>;
+    hotel: Pick<Tables<"hotel">, "id" | "name">;
   }> | null>();
 });

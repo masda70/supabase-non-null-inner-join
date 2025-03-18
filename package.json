@@ -1,5 +1,5 @@
 {
-  "name": "supabase-computed-rels-repro",
+  "name": "supabase-non-null-inner-join",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

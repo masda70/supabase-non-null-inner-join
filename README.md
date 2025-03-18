@@ -1,4 +1,7 @@
-# Postgrest Computed Relationships Bug
+# Supabase-js non-null !inner join issue reproduction
+
+Reproduces issue described in
+https://github.com/supabase/supabase-js/issues/1368
 
 ## Repro
 
